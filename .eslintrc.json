@@ -1,0 +1,185 @@
+{
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "next",
+    "plugin:import/recommended",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts",
+        "*.tsx"
+      ],
+      "rules": {
+        "no-undef": "off"
+      }
+    },
+    {
+      "files": ["*.d.ts"],
+      "rules": {
+        "no-var": "off"
+      }
+    },
+    {
+      "files": [
+        "page.tsx",
+        "layout.tsx"
+      ],
+      "rules": {
+        "react/function-component-definition": [
+          "error",
+          {
+            "namedComponents": "function-declaration"
+          }
+        ]
+      }
+    }
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "project": "./tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "import",
+    "deprecation"
+  ],
+  "rules": {
+    "deprecation/deprecation": "warn",
+    "curly": [
+      "error",
+      "all"
+    ],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      }
+    ],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "react-hook-form",
+            "importNames": [
+              "Form",
+              "useForm"
+            ],
+            "message": "Import from components/rhf instead"
+          }
+        ],
+        "patterns": [
+          {
+            "group": [
+              "@components/rhf/*"
+            ],
+            "message": "use @components/rhf instead @components/rhf/..."
+          },
+          {
+            "group": [
+              "@components/ui/*"
+            ],
+            "message": "use @components/ui instead @components/ui/..."
+          }
+        ]
+      }
+    ],
+    "import/newline-after-import": [
+      "error"
+    ],
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "never",
+        "groups": [
+          [
+            "builtin",
+            "external",
+            "internal"
+          ],
+          "parent",
+          "sibling",
+          "index",
+          "type"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          },
+          {
+            "pattern": "next/*",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": [
+          "react",
+          "next"
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "arrowParens": "always",
+        "endOfLine": "lf",
+        "jsxSingleQuote": true,
+        "printWidth": 80,
+        "semi": true,
+        "plugins": [
+          "prettier-plugin-tailwindcss",
+          "prettier-plugin-classnames"
+        ],
+        "singleQuote": true
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function"
+      }
+    ],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "./tsconfig.json"
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  }
+}
