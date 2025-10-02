@@ -13,7 +13,7 @@ export const createUserMarkerElement = (
   Object.assign(image.style, {
     width: '70px',
     height: '70px',
-    backgroundImage: avatarUrl ? `url('${avatarUrl}')` : DEFAULT_AVATAR_SRC,
+    backgroundImage: `url('${avatarUrl ? avatarUrl : DEFAULT_AVATAR_SRC}')`,
     backgroundSize: 'cover',
     borderRadius: '50%',
     border: '2px solid white',
