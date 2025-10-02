@@ -30,6 +30,6 @@ export const terminateSessions = async (): Promise<Response> => {
       ok: true,
     };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

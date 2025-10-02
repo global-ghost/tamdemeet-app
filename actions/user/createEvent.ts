@@ -25,6 +25,6 @@ export const createUserEvent = async (
 
     return { message: 'Event created successfully', ok: true };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

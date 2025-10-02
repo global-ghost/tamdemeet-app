@@ -32,6 +32,6 @@ export const resetPassword = async (
     );
     return { message: 'Reset email sent. Check your email!', ok: true };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

@@ -54,6 +54,6 @@ export const setNewPassword = async (
 
     return { message: 'Password successfully updated!', ok: true };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

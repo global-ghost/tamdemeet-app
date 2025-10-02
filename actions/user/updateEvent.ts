@@ -41,6 +41,6 @@ export const updateUserEvent = async (
       message: 'Updated successfully',
     };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

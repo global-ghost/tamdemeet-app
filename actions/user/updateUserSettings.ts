@@ -34,6 +34,6 @@ export const updateUserSettings = async (
       data: userDto(updatedUser),
     };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

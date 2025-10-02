@@ -23,6 +23,6 @@ export const updateUserSettings = async (src: string): Promise<Response> => {
       message: 'Updated successfully',
     };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

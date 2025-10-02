@@ -7,7 +7,7 @@ export const Card: React.FunctionComponent<
   <div
     {...props}
     className={classNames(
-      'border border-cardBorder bg-card px-8 py-8 pb-10',
+      'border border-cardBorder rounded-md bg-card px-8 py-8 pb-10',
       className,
     )}
   >

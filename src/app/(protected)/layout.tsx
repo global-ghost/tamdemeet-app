@@ -43,7 +43,7 @@ export default async function ProtectedLayout({
       <div className='flex w-full flex-col'>
         {/* <header className='h-20 w-full bg-card py-8 pl-4'>Header</header> */}
 
-        <main className='m-[7px] grow px-1 py-2 lg:m-4 lg:p-2'>
+        <main className='m-[7px] grow py-2 sm:px-1 lg:m-4 lg:p-2'>
           <SessionProvider>
             <MapProvider>{children}</MapProvider>
           </SessionProvider>

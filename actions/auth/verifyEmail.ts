@@ -43,6 +43,6 @@ export const verifyEmail = async (token: string): Promise<Response> => {
 
     return { message: 'Email has been successfully verified!', ok: true };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

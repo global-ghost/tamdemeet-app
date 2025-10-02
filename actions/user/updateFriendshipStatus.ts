@@ -24,6 +24,6 @@ export const updateFriendRequest = async (
 
     return { message: 'Successfully', ok: true };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };

@@ -44,6 +44,7 @@ export const register = async (
     await createUserSession(createdUser.id);
 
     const verificationToken = await generateVerificationToken(email);
+
     await sendVerificationEmail(
       verificationToken.email,
       verificationToken.token,
@@ -51,6 +52,6 @@ export const register = async (
 
     return { message: 'Confirmation email sent. Check your email!', ok: true };
   } catch (error) {
-    return handleServerError({ error });
+    return handleServerError(error);
   }
 };
