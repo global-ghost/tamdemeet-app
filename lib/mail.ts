@@ -28,7 +28,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
 };
 
 export const sendPasswordResetEmail = async (email: string, token: string) => {
-  const confirmLink = `http://localhost:3000/auth/new-password?token=${token}`;
+  const confirmLink = `${process.env.NEXTAUTH_URL}/auth/new-password?token=${token}`;
   const { error } = await resend.emails.send({
     from: 'Tamdemeet <noreply@tamdemeet.de>',
     to: email,
