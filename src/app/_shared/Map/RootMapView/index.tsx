@@ -216,8 +216,8 @@ export const RootMap: React.FunctionComponent<Props> = ({
         {center && memoizedMap}
       </div>
       <div
-        className={`fixed right-0 top-0 z-40 size-full max-w-[calc(100%-60px)] transition-transform
-        duration-300 sm:max-w-[400px] lg:block lg:w-full lg:max-w-full ${
+        className={`fixed right-0 top-0 z-40 size-full w-full transition-transform duration-300
+        sm:max-w-[400px] lg:block lg:w-full lg:max-w-full ${
           isSidebarOpen ? 'translate-x-0' : 'translate-x-full'
         } lg:static lg:block lg:translate-x-0`}
       >

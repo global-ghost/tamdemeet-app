@@ -4,7 +4,11 @@ import { Button } from '@components/ui';
 import { signOut } from 'next-auth/react';
 // import { logout } from 'actions/auth/logout';
 
-export const SignOutButton = () => {
+type Props = {
+  size?: number;
+};
+
+export const SignOutButton: React.FunctionComponent<Props> = ({ size }) => {
   const onClick = async () => {
     await fetch('/api/logout', {
       method: 'POST',
@@ -21,7 +25,7 @@ export const SignOutButton = () => {
       variant='gray'
       icon='log-out'
       iconColor='error'
-      iconSize={24}
+      iconSize={size ?? 24}
       onClick={onClick}
     />
   );
