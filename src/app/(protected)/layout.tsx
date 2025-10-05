@@ -17,7 +17,7 @@ export default async function ProtectedLayout({
     return null;
   }
   return (
-    <div className='flex min-h-screen pb-[70px] md:pb-0'>
+    <div className='flex min-h-screen pb-[90px] md:pb-0'>
       <div className='hidden w-full max-w-[60px] flex-col bg-navbar px-[10px] md:flex'>
         <div className='flex justify-center py-8'>
           <Image src={logo} alt='logo' height={24} priority />
@@ -40,8 +40,11 @@ export default async function ProtectedLayout({
         </nav>
       </div>
 
-      <div className='fixed bottom-0 z-10 flex w-full items-center bg-navbar px-[10px] md:hidden'>
-        <nav className='mt-2 flex size-full items-center justify-center gap-6 text-center '>
+      <div
+        className='fixed bottom-[-10px] z-10 flex w-full items-center bg-navbar px-[10px] pb-2
+          md:hidden'
+      >
+        <nav className='mt-2 flex size-full items-center justify-center gap-6 py-2 text-center '>
           <Image src={logo} alt='logo' height={26} priority />
           <div className='grow' />
           <Link className='block' href='/map'>
@@ -71,10 +74,6 @@ export default async function ProtectedLayout({
             <MapProvider>{children}</MapProvider>
           </SessionProvider>
         </main>
-
-        <footer className='static h-20 w-full py-8 pl-4 text-center text-xs sm:text-sm'>
-          @ 2025 Tamdemeet. All right reserved.
-        </footer>
       </div>
     </div>
   );
