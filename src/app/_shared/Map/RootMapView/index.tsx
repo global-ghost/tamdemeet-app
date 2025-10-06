@@ -203,8 +203,8 @@ export const RootMap: React.FunctionComponent<Props> = ({
         </div>
 
         <div
-          className='absolute bottom-[20px] right-[10px] z-30 flex gap-[10px] rounded-full bg-card
-            p-1'
+          className='absolute bottom-[60px] right-[10px] z-30 flex gap-[10px] rounded-full bg-card
+            p-1 md:bottom-[20px]'
         >
           <Button
             iconSize={30}

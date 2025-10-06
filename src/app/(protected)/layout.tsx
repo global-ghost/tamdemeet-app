@@ -41,8 +41,8 @@ export default async function ProtectedLayout({
       </div>
 
       <div
-        className='fixed bottom-[-10px] z-10 flex w-full items-center bg-navbar px-[10px] pb-2
-          md:hidden'
+        className='fixed bottom-[-10px] z-10 flex w-full items-center border-t border-t-disabled
+          px-[10px] pb-2 md:hidden'
       >
         <nav className='mt-2 flex size-full items-center justify-center gap-6 py-2 text-center '>
           <Image src={logo} alt='logo' height={26} priority />
