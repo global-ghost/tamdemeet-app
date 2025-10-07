@@ -1,8 +1,8 @@
 import { DEFAULT_EVENT_SRC } from '@shared/AvatarSettings';
 
 export const createEventMarkerElement = (
+  labelText: string,
   imageUrl?: string,
-  labelText?: string,
 ) => {
   const container = document.createElement('div');
   container.style.position = 'relative';
@@ -27,7 +27,7 @@ export const createEventMarkerElement = (
   });
 
   const label = document.createElement('span');
-  label.textContent = labelText ?? 'YOU';
+  label.textContent = labelText;
   Object.assign(label.style, {
     display: 'block',
     textAlign: 'center',

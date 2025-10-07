@@ -7,12 +7,16 @@ export const createUserMarkerElement = (
   const container = document.createElement('div');
   container.style.position = 'relative';
   container.style.width = '70px';
+  container.style.display = 'flex';
+  container.style.flexDirection = 'column';
+  container.style.alignItems = 'center';
   container.style.height = '90px';
 
   const image = document.createElement('div');
   Object.assign(image.style, {
     width: '70px',
     height: '70px',
+    flexShrink: 0,
     backgroundImage: `url('${avatarUrl ? avatarUrl : DEFAULT_AVATAR_SRC}')`,
     backgroundSize: 'cover',
     borderRadius: '50%',
@@ -27,7 +31,7 @@ export const createUserMarkerElement = (
     textAlign: 'center',
     marginTop: '4px',
     backgroundColor: '#101519',
-    padding: '3px',
+    padding: '3px 10px',
     borderRadius: '10px',
     fontSize: '14px',
     border: '1px solid white',

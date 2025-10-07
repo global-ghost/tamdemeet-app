@@ -48,7 +48,7 @@ export const FreindRequestList = () => {
                     alt='avatar'
                   />
                 )}
-                <div>{friendRequest.name}</div>
+                <div>{friendRequest.name ?? friendRequest.email} </div>
                 <div className='grow' />
                 <div className='flex flex-col'>
                   <Button
@@ -90,7 +90,7 @@ export const FreindRequestList = () => {
                     alt='avatar'
                   />
                 )}
-                <div>{friendRequest.name}</div>
+                <div>{friendRequest.name ?? friendRequest.email}</div>
                 <div className='grow' />
                 <div>
                   <Button
@@ -122,7 +122,7 @@ export const FreindRequestList = () => {
                   alt='avatar'
                 />
               )}
-              <div>{friendRequest.name}</div>
+              <div>{friendRequest.name ?? friendRequest.email}</div>
               <div className='grow' />
               <div>
                 <Button

@@ -21,9 +21,9 @@ export const createOrUpdateEventsMarkers = (
         lng: event.lng,
       };
 
-      marker.content = createEventMarkerElement(undefined, event.title);
+      marker.content = createEventMarkerElement(event.title);
     } else {
-      const element = createEventMarkerElement(undefined, event.title);
+      const element = createEventMarkerElement(event.title);
 
       const marker = new google.maps.marker.AdvancedMarkerElement({
         map,

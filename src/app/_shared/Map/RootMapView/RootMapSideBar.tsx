@@ -38,7 +38,7 @@ export const RootMapSideBar: React.FunctionComponent<{
                   src={contact.image ?? DEFAULT_AVATAR_SRC}
                 />
 
-                <p className='text-start '>{contact.name}</p>
+                <p className='text-start '>{contact.name ?? contact.email}</p>
                 <div className='grow' />
                 <div className='text-sm'>
                   <p className='text-gray'>Geolocation updated at: </p>

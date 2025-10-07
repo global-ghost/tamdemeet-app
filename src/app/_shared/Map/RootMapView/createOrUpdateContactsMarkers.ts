@@ -18,7 +18,7 @@ export const createOrUpdateContactsMarkers = (
       } else {
         const element = createUserMarkerElement(
           contact.image ?? undefined,
-          contact.name ?? undefined,
+          contact.name ?? contact.email,
         );
 
         const marker = new google.maps.marker.AdvancedMarkerElement({
